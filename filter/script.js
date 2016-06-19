@@ -12,8 +12,8 @@ angular.module('orderByExample', [])
     $scope.reverse = true;
 
     $scope.sortBy = function(propertyName) {
-		$scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
-		$scope.propertyName = propertyName;    	
+  		$scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
+  		$scope.propertyName = propertyName;
     };
 
 
