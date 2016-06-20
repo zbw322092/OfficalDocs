@@ -12,7 +12,7 @@
 }
 
 .friends td:first-child, .friends th:first-child {
-	border-left: none;
+	border-left: none ;
 }
 
 .sortorder:after {
