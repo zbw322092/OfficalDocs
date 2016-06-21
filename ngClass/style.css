@@ -1,0 +1,19 @@
+.strike {
+	text-decoration: line-through;
+}
+
+.bold {
+	font-weight: bold; 
+}
+
+.has-error {
+	background-color: red;
+}
+
+.red {
+	background-color: red;
+}
+
+.changeStyle5 {
+	background-color: orange;
+}

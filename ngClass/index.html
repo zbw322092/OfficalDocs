@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app="ngClassExample">
+
+<head>
+  <title>ngClass</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <!-- if the expression evaluates to an object, then for each key-value pair of the object
+  with truthy value the corresponding key is used as a class name -->
+  <p ng-class="{strike: strike, bold: bold, 'has-error': error}">Map Syntax Example</p>
+  <input type="checkbox" ng-model="strike">deleted(apply "strike" class)</input><br>
+  <input type="checkbox" ng-model="bold">important(apply "bold" class)</input><br>
+  <input type="checkbox" ng-model="error">error(apply "has-error" class)</input>
+
+  <br>
+  <br>
+  <hr>
+
+  <!-- If the expression evaluates to a string, the string should be one or more space-delimited
+  class names. -->
+  <!-- 思考怎么写的时候要清楚两件事，第一是什么东西是需要变的，比如这里<p>的class需要变，以class的变化来改变
+  样式。第二需要思考的是这个需要变的部分是根据什么变化，这里是<p>的class需要根据input的值来变化，那么就将
+  这两个部分绑定。 -->
+  <p ng-class="changeClass">Using String Syntax</p>
+  <input type="text" placeholder="Type: bold strike red" ng-model="changeClass"></input>
+
+  <br>
+  <br>
+  <hr>
+
+  <!-- In this version, each input can just define one style -->
+  <p ng-class="[changeStyles1, changeStyles2, changeStyles3]">Using Array Syntax</p>
+  <input placeholder="Type: bold strike red" ng-model="changeStyles1"></input><br>
+  <input placeholder="Type: bold strike red" ng-model="changeStyles2"></input><br>
+  <input placeholder="Type: bold strike red" ng-model="changeStyles3"></input>
+
+  <br>
+  <br>
+  <hr>
+
+  <!-- unsuccessful -->
+  <p ng-class="[ changeStyle4, { changeStyle5: changeStyle5 }]">Using Array and Map Syntax</p>
+  <input placeholder="Type: bold, strike, red" ng-model="changeStyle4"></input><br>
+  <input type="checkbox" ng-model="changeStyle5">warning (apply "orange" class)</input>
+
+
+  <script type="text/javascript" src="../scripts/angular.js"></script>
+  <script type="text/javascript" src="../scripts/angular-route.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
