@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="ngModelExample">
+
+<head>
+  <title>ngModel</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <div class="checkboxModel" ng-controller="CheckboxController">
+    <span>Value1:</span><input type="checkbox" ng-model="booleanValue"><br>
+    <span>Value2:</span>
+    <input type="checkbox" ng-model="secondValue" ng-true-value="'YES'" ng-false-value="'NO'"><br>
+    
+    <p>value1 = <span>{{ booleanValue }}</span></p>
+    <p>value2 = <span>{{ secondValue }}</span></p>    
+  </div>
+
+
+  <script type="text/javascript" src="../scripts/angular.js"></script>
+  <script type="text/javascript" src="../scripts/angular-route.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
