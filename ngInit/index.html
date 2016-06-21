@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="ngInitExample">
+
+<head>
+  <title>ngInit</title>
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+</head>
+
+<body>
+
+  
+  <div ng-controller="InitController">
+    <div ng-repeat="initList in initLists" ng-init="outerIndex = $index">
+      <div ng-repeat="innerList in initList" ng-init="innerIndex = $index">
+        List[{{outerIndex}}][{{innerIndex}}] = {{ innerList }}<br>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="../scripts/angular.js"></script>
+  <script type="text/javascript" src="../scripts/angular-route.js"></script>
+  <!-- use angular after angular library loaded -->
+  <script>
+    angular.module('ngInitExample', [])
+      .controller('InitController', ['$scope', function($scope){
+        $scope.initLists = [['a', 'b'], ['c', 'd']];
+      }]);
+  </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
