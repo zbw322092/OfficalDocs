@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="ngModelExample">
+
+<head>
+  <title>ngModel</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <!-- example 1  ngModel checkbox -->
+  <div class="checkboxModel" ng-controller="CheckboxController">
+    <span>Value1:</span><input type="checkbox" ng-model="booleanValue"><br>
+    <span>Value2:</span>
+    <input type="checkbox" ng-model="secondValue" ng-true-value="'YES'" ng-false-value="'NO'"><br>
+    
+    <p>value1 = <span>{{ booleanValue }}</span></p>
+    <p>value2 = <span>{{ secondValue }}</span></p>    
+  </div>
+
+  <br>
+  <br>
+  <hr>
+
+  <!-- example 2  ngModel text -->
+  <form name="myForm" ng-controller="ExampleController">
+    <span>Single word:</span>
+      <input name="input" type="text" ng-model="example.text" ng-pattern="example.word" required 
+      ng-trim="false"><br>
+    <div role="alert">
+      <span ng-show="myForm.input.$error.required">Required!</span>
+      <span ng-show="myForm.input.$error.pattern">Single Word only!</span>      
+    </div>
+    <span>text = </span><span>{{ example.text }}</span><br>
+    <span>myForm.input.$valid = </span><span>true</span><br>
+    <span>myForm.input.$error = </span><span>{}</span><br>
+    <span>myForm.$valid = </span><span>true</span><br>
+    <span>myForm.$error.required = </span><span>false</span>
+  </form>
+
+
+  <script type="text/javascript" src="../scripts/angular.js"></script>
+  <script type="text/javascript" src="../scripts/angular-route.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
