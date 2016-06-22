@@ -94,6 +94,43 @@
     <span>myForm.$valid = {{ !!inputDateForm.$valid }}</span><br>
     <span>myForm.$error.required = {{ !!inputDateForm.$error.required }}</span><br>
   </form>
+  <br>
+  <hr>
+
+  <!-- input radio -->
+  <form name="inputRadioForm" ng-controller="InputRadioController">
+    <label>
+      <input ng-model="color.name" type="radio" value="red">
+      Red
+    </label><br>
+    <label>
+      <input ng-model="color.name" type="radio" ng-value="specialValue">
+      Green
+    </label><br>
+    <label>
+      <input ng-model="color.name" type="radio" value="blue">
+      Blue
+    </label><br>
+
+    <span>color = {{ color.name }}</span><br>
+    <p>Note that `ng-value="specialValue"` sets radio item's value to be the value of `$scope.specialValue`.</p>
+  </form>
+
+
+  <!-- input datetime-local -->
+
+  <!-- input email -->
+
+  <!-- input month -->
+
+  <!-- input number -->
+
+  <!-- input time -->
+
+  <!-- input url -->
+
+  <!-- input week -->
+
 
 
   <script type="text/javascript" src="../scripts/angular.js"></script>

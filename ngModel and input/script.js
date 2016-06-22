@@ -19,4 +19,13 @@ angular.module('ngModelExample', [])
 		$scope.dateExample = {
 			value: new Date(2013, 9, 22)
 		};
+	}])
+	.controller('InputRadioController', ['$scope', function($scope) {
+		$scope.color = {
+			name: 'blue'
+		};
+		$scope.specialValue = {
+			"id": "12345",
+			"value": "green"
+		};
 	}]);
