@@ -78,9 +78,22 @@
 
     <code>myForm.$error.minlength = {{ !!inputForm.$error.minlength }}</code><br>
     <code>myForm.$error.maxlength = {{ !!inputForm.$error.maxlength }}</code>
-
-
   </div>
+  <br>
+  <hr>
+
+
+  <!-- input date -->
+  <form name="inputDateForm" ng-controller="InputDataController">
+    <label>Pick a date in 2013: </label>
+      <input name="inputDate" type="date" ng-model="dateExample.value" 
+      min="2013-01-01" max="2013-12-31" required /><br>
+    <span>value = {{ dateExample.value | date: "yyyy-MM-dd" }}</span><br>
+    <span>myForm.input.$valid = {{ inputDateForm.inputDate.$valid }}</span><br>
+    <span>myForm.input.$error = {{ inputDateForm.inputDate.$error }}</span><br>
+    <span>myForm.$valid = {{ !!inputDateForm.$valid }}</span><br>
+    <span>myForm.$error.required = {{ !!inputDateForm.$error.required }}</span><br>
+  </form>
 
 
   <script type="text/javascript" src="../scripts/angular.js"></script>

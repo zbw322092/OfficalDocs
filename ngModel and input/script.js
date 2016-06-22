@@ -14,4 +14,9 @@ angular.module('ngModelExample', [])
 			name: 'guest',
 			last: 'visitor'
 		};
+	}])
+	.controller('InputDataController', ['$scope', function($scope) {
+		$scope.dateExample = {
+			value: new Date(2013, 9, 22)
+		};
 	}]);
