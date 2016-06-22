@@ -22,7 +22,7 @@
   <hr>
 
   <!-- example 2  ngModel text -->
-  <form name="myForm" ng-controller="ExampleController">
+  <form name="myForm" ng-controller="InputTextController">
     <span>Single word:</span>
       <input name="input" type="text" ng-model="example.text" ng-pattern="example.word" required 
       ng-trim="false"><br>
@@ -36,6 +36,51 @@
     <span>myForm.$valid = </span><span>true</span><br>
     <span>myForm.$error.required = </span><span>false</span>
   </form>
+  <br>
+  <br>
+  <hr>
+
+  <!-- HTML input element control. When used together with ngModel, it provides data-binding,
+  input state control, and validation. Input control follows HTML input types and poyfills the 
+  HTML5 validation behavior for older browsers. -->
+  <div ng-controller="InputController">
+    <form name="inputForm">
+      <label>
+        User name:
+          <input type="text" name="userName" ng-model="inputExample.name" required>
+      </label>
+      <div>
+        <span ng-show="inputForm.userName.$error.required">Reuqired!</span>        
+      </div>
+      <label>
+        Last name:
+          <input type="text" name="lastName" ng-model="inputExample.last" 
+          ng-minlength="3" ng-maxlength="10">
+      </label>
+      <div>
+        <span ng-show="inputForm.lastName.$error.minlength">Too short!</span>
+        <span ng-show="inputForm.lastName.$error.maxlength">Too long!</span>        
+      </div>
+    </form>
+    <br>
+    <hr>
+    <code>user = {{ inputExample }}</code><br><br>
+    
+    <code>myForm.userName.$valid = {{ inputForm.userName.$valid }}</code><br>
+    <code>myForm.userName.$error = {{ inputForm.userName.$error }}</code><br><br>
+    
+    <code>myForm.lastName.$valid = {{ inputForm.lastName.$valid }}</code><br>
+    <code>myForm.lastName.$error = {{ inputForm.lastName.$error }}</code><br><br>
+    
+    <code>myForm.$valid = {{ inputForm.$valid }}</code><br><br>
+
+    <code>myForm.$error.required = {{ !!inputForm.$error.required }}</code><br><br>
+
+    <code>myForm.$error.minlength = {{ !!inputForm.$error.minlength }}</code><br>
+    <code>myForm.$error.maxlength = {{ !!inputForm.$error.maxlength }}</code>
+
+
+  </div>
 
 
   <script type="text/javascript" src="../scripts/angular.js"></script>
