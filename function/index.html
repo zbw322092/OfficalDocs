@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="functionsExample">
+
+<head>
+  <title>functions</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <!-- angular.bind  no example-->
+
+
+  <!-- example 1: angular bootstrap -->
+  <!-- <div ng-controller="WelcomeController">
+    {{greeting}}
+  </div>
+ -->
+  
+  
+  <!-- example 2: angular.copy -->
+  <div ng-controller="CopyController">
+    <form>
+      <label>Name:</label><input type="text" ng-model="user.name"><br>
+      <label>Age:</label><input type="text" ng-model="user.age"><br>
+      <label>Gender:</label>
+      <input type="radio" value="male" ng-model="user.gender">
+      <input type="radio" value="female" ng-model="user.gender"><br>
+      <input type="button" value="RESET" ng-click="reset()">
+      <input type="button" value="SAVE" ng-click="save()">
+    </form>
+
+    <pre>form = {{user | json}}</pre>
+    <pre>master = {{master | json}}</pre>
+  </div>
+  
+
+
+
+
+
+  <script type="text/javascript" src="../scripts/angular.js"></script>
+  <script type="text/javascript" src="../scripts/angular-route.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
