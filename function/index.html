@@ -33,6 +33,28 @@
     <pre>master = {{master | json}}</pre>
   </div>
   
+  <hr>
+  <!-- angular.element  no example -->
+
+
+  <!-- example 3: angular.equals -->
+  <div ng-controller="EqualsController">
+    <form>
+      <h3>User 1</h3>
+      <label>Name:</label><input type="text" ng-model="user1.name"><br>
+      <label>Age:</label><input type="text" ng-model="user1.age">
+      <h3>User 2</h3>
+      <label>Name:</label><input type="text" ng-model="user2.name"><br>
+      <label>Age:</label><input type="text" ng-model="user2.age"><br>
+      <input type="button" value="Compare" ng-click="result = compare()">
+    </form>
+    <pre>{{ user1 | json }}</pre>
+    <pre>{{ user2 | json }}</pre>
+    <!-- 一下这种写法需要在上面ng-click上面命名一个result并给它赋值。或者改写controller里面
+    的函数，将对比结果赋给一个变量result -->
+    <pre>compare result: {{ result }}</pre>
+  </div>
+
 
 
 

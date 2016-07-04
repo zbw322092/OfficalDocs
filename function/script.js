@@ -26,4 +26,9 @@ app.controller('CopyController', function($scope) {
 		angular.copy($scope.user, $scope.master);
 	}
 
+})
+.controller('EqualsController', function($scope) {
+	$scope.compare = function() {
+		return angular.equals($scope.user1, $scope.user2);
+	}
 });
