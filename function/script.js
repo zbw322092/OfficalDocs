@@ -77,6 +77,16 @@ app.controller('CopyController', function($scope) {
 	
 	$scope.typeOrigin = typeof $scope.jsonExample;
 	$scope.typeConvert = typeof $scope.jsonValue;
+})
+
+.controller('IdentityExample', function($scope) {
+	function getResult(fn, input) {
+		return (fn || angular.identity)(input);
+	}
+
+	console.log(getResult(function(n) {return n * 2}, 21));
+	console.log(getResult(null, 21));
+	console.log(getResult(undefined, 21));
 });
 
 
