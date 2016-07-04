@@ -51,11 +51,21 @@
     <pre>{{ user1 | json }}</pre>
     <pre>{{ user2 | json }}</pre>
     <!-- 一下这种写法需要在上面ng-click上面命名一个result并给它赋值。或者改写controller里面
-    的函数，将对比结果赋给一个变量result -->
+    的函数，将对比结果赋给一个变量result
+    同时也可以使用这种形式的绑定：compare result: {{ compare() }} -->
     <pre>compare result: {{ result }}</pre>
   </div>
 
-
+  <hr>
+  <!-- example 4 angular.extend -->
+  <div ng-controller="ExtendController">
+    <form>
+      <label>User1:</label><input type="text" ng-model="users.user1"><br>
+      <label>User2:</label><input type="text" ng-model="users.user2"><br>
+      <label>User3:</label><input type="text" ng-model="users.user3">
+      <div>{{ users }}</div>
+    </form>
+  </div>
 
 
 

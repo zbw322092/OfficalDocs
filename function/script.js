@@ -31,4 +31,7 @@ app.controller('CopyController', function($scope) {
 	$scope.compare = function() {
 		return angular.equals($scope.user1, $scope.user2);
 	}
+})
+.controller('ExtendController', function($scope) {
+	$scope.users = angular.extend({'a':'ok'}, $scope.user1, $scope.user2, $scope.user3);
 });
