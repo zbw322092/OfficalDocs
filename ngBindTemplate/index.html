@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="ngBindTemplateExample">
+
+<head ng-controller="NgBindTemplateCtrl">
+  <title>ngBindHtml</title>
+
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+</head>
+
+<body>
+  
+  <div ng-controller="NgBindTemplateCtrl">
+  	<label>Salutation: <input type="text" ng-model="salutation"></label><br>
+  	<label>Name: <input type="text" ng-model="name"></label>
+
+  	<pre ng-bind-template="{{salutation}} {{name}}"></pre>
+	<!-- ng-bind-template cannot be used like this: -->
+  	<pre ng-bind-template="salutation"></pre>
+
+
+  	<pre ng-bind="salutation"></pre> 
+  	<!-- ng-bind cannot be used like this: -->
+  	<!-- <pre ng-bind="salutation name"></pre> 	-->
+
+  	<!-- ng-bind will work in this way: -->
+  	<pre ng-bind="salutation + ' ' + name"></pre>
+  	
+  	<pre>{{ salutation }} {{ name }}</pre>
+  	
+  	<!-- this way will not work -->
+  	<!-- <pre>{{ salutation name}}</pre> -->
+
+	<!-- this way is working: -->
+  	<pre>{{ salutation + ' ' + name}}</pre>
+
+	
+
+
+  </div>
+
+  <script type="text/javascript" src="../scripts/angular.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
