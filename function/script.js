@@ -206,6 +206,19 @@ app.controller('CopyController', function($scope) {
   console.log(dst3.person.other === src5.person.other); // false
 
 
+})
+
+.controller('ToJsonController', function($scope) {
+  $scope.jsonString = 
+    '{ "employees" : [' +
+    '{ "firstName":"John" , "lastName":"Doe" },' +
+    '{ "firstName":"Anna" , "lastName":"Smith" },' +
+    '{ "firstName":"Peter" , "lastName":"Jones" } ]}'; 
+
+  $scope.jsonFormat = angular.toJson($scope.jsonString, true);
+
+  console.log(typeof $scope.jsonString);
+  console.log(typeof $scope.jsonFormat);
 });
 
 
